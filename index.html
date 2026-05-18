@@ -3,28 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07110d" />
+  <meta name="theme-color" content="#07150f" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
 
-  <title>JL Mantenimiento Integral | Jardinería y Piscinas en Madrid, Toledo y Ávila</title>
-  <meta name="description" content="Jardinería, poda, limpieza de parcelas y mantenimiento de piscinas en Madrid, Toledo, Ávila y alrededores. Presupuesto por WhatsApp." />
-  <meta name="keywords" content="jardinería Madrid, mantenimiento piscinas Madrid, puesta a punto piscinas, poda árboles Toledo, limpieza parcelas Ávila, corte setos Madrid, mantenimiento jardines Toledo, jardineros Ávila" />
+  <title>JL Mantenimiento Integral | Jardinería, parcelas y piscinas en Madrid, Toledo y Ávila</title>
+  <meta name="description" content="Jardinería, poda de árboles, corte de setos, limpieza de parcelas, puesta a punto y mantenimiento de piscinas en Madrid, Toledo, Ávila y alrededores. Presupuesto sin compromiso por WhatsApp." />
+  <meta name="keywords" content="mantenimiento de jardines Madrid, jardinería Toledo, jardinería Ávila, limpieza de parcelas Madrid, poda de árboles, corte de setos, mantenimiento de piscinas Madrid, puesta a punto piscinas Toledo, mantenimiento piscinas Ávila" />
   <meta name="author" content="JL Mantenimiento Integral" />
 
-  <meta property="og:title" content="JL Mantenimiento Integral | Jardinería y piscinas" />
-  <meta property="og:description" content="Mantenimiento de jardines, parcelas, setos, árboles y piscinas en Madrid, Toledo, Ávila y alrededores." />
+  <meta property="og:title" content="JL Mantenimiento Integral | Jardinería, parcelas y piscinas" />
+  <meta property="og:description" content="Poda, setos, limpieza de parcelas, mantenimiento de jardines y piscinas en Madrid, Toledo, Ávila y alrededores." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
-  <meta property="og:image" content="foto1.jpeg" />
-
+  <meta property="og:image" content="fotoprincipal.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="JL Mantenimiento Integral" />
-  <meta name="twitter:description" content="Jardinería, parcelas y piscinas en Madrid, Toledo y Ávila." />
-  <meta name="twitter:image" content="foto1.jpeg" />
+  <meta name="twitter:description" content="Jardinería, parcelas y piscinas en Madrid, Toledo, Ávila y alrededores." />
+  <meta name="twitter:image" content="fotoprincipal.jpg" />
 
   <link rel="icon" href="logo.jpeg" />
   <link rel="apple-touch-icon" href="logo.jpeg" />
-  <link rel="preload" as="image" href="foto1.jpeg" />
+  <link rel="preload" href="fotoprincipal.jpg" as="image" />
   <link rel="stylesheet" href="styles.css" />
 
   <script type="application/ld+json">
@@ -32,11 +31,16 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+        "@type": "LocalBusiness",
         "@id": "#jl-mantenimiento-integral",
         "name": "JL Mantenimiento Integral",
-        "description": "Empresa de mantenimiento integral especializada en jardinería, poda de árboles, corte de setos, limpieza de parcelas, puesta a punto de piscinas y mantenimiento de piscinas en Madrid, Toledo, Ávila y alrededores.",
-        "image": ["foto1.jpeg", "logo.jpeg"],
+        "description": "Empresa de jardinería, limpieza de parcelas, mantenimiento de jardines y mantenimiento de piscinas en Madrid, Toledo, Ávila y alrededores.",
+        "image": [
+          "fotoprincipal.jpg",
+          "mantenimientopiscinas.jpg",
+          "puestaapunto.jpg",
+          "foto1.jpeg"
+        ],
         "logo": "logo.jpeg",
         "telephone": "+34608681863",
         "email": "jl_mantenimiento_integral@gmail.com",
@@ -46,67 +50,56 @@
           { "@type": "AdministrativeArea", "name": "Toledo" },
           { "@type": "AdministrativeArea", "name": "Ávila" }
         ],
-        "knowsAbout": [
-          "Jardinería",
-          "Poda de árboles",
-          "Corte de setos",
-          "Limpieza de parcelas",
-          "Mantenimiento de jardines",
-          "Puesta a punto de piscinas",
-          "Mantenimiento de piscinas"
-        ],
-        "makesOffer": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Poda de árboles", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corte de setos", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de parcelas", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de jardines", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Puesta a punto de piscinas", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de piscinas", "areaServed": ["Madrid", "Toledo", "Ávila"] } }
+        "sameAs": [
+          "https://www.instagram.com/jl_mantenimiento_integral_",
+          "https://www.facebook.com/profile.php?id=61577876143836"
         ],
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+34608681863",
-          "contactType": "presupuestos y atención al cliente",
-          "areaServed": ["ES-M", "ES-CM", "ES-CL"],
-          "availableLanguage": ["es"]
+          "contactType": "Atención al cliente y presupuestos",
+          "areaServed": ["Madrid", "Toledo", "Ávila"],
+          "availableLanguage": "es"
         },
-        "sameAs": [
-          "https://www.instagram.com/jl_mantenimiento_integral_",
-          "https://www.facebook.com/profile.php?id=61577876143836"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "#website",
-        "name": "JL Mantenimiento Integral",
-        "publisher": { "@id": "#jl-mantenimiento-integral" },
-        "inLanguage": "es-ES"
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de JL Mantenimiento Integral",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Poda de árboles" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corte de setos" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de parcelas" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de jardines" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Puesta a punto de piscinas" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de piscinas" } }
+          ]
+        }
       },
       {
         "@type": "FAQPage",
+        "@id": "#preguntas-frecuentes",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "¿En qué zonas trabaja JL Mantenimiento Integral?",
+            "name": "¿En qué zonas trabajáis?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "JL Mantenimiento Integral realiza servicios de jardinería, parcelas y piscinas en Madrid, Toledo, Ávila y alrededores."
+              "text": "JL Mantenimiento Integral trabaja en Madrid, Toledo, Ávila y alrededores para servicios de jardinería, parcelas y piscinas."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Hacéis puesta a punto y mantenimiento de piscinas?",
+            "name": "¿Hacéis puesta a punto de piscinas?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sí. Se realizan trabajos de puesta a punto de piscinas, limpieza, revisión inicial y mantenimiento periódico según las necesidades del cliente."
+              "text": "Sí. Realizamos puesta a punto de piscinas, limpieza inicial, revisión del estado del agua y preparación para temporada."
             }
           },
           {
             "@type": "Question",
-            "name": "¿El presupuesto es sin compromiso?",
+            "name": "¿El presupuesto tiene compromiso?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sí. Puedes solicitar presupuesto por WhatsApp, teléfono o email indicando el servicio, la zona y los detalles del trabajo."
+              "text": "No. Puedes solicitar presupuesto sin compromiso por WhatsApp, teléfono o email."
             }
           }
         ]
@@ -115,16 +108,17 @@
   }
   </script>
 </head>
+
 <body>
   <header class="site-header" id="inicio">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <div class="container nav-wrap">
       <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <img src="logo.jpeg" alt="Logo de JL Mantenimiento Integral" width="56" height="56" />
+        <img src="logo.jpeg" alt="Logo de JL Mantenimiento Integral" width="54" height="54" />
         <span>
           <strong>JL Mantenimiento Integral</strong>
-          <small>Jardinería · Parcelas · Piscinas</small>
+          <small>Jardines · Parcelas · Piscinas</small>
         </span>
       </a>
 
@@ -136,9 +130,9 @@
 
       <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
+        <a href="#piscinas">Piscinas</a>
         <a href="#zonas">Zonas</a>
         <a href="#trabajos">Trabajos</a>
-        <a href="#proceso">Proceso</a>
         <a href="#faq">FAQ</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -150,67 +144,52 @@
   </header>
 
   <main id="contenido">
-    <section class="hero section-glow" aria-label="Presentación">
+    <section class="hero section-glow" aria-label="Presentación de JL Mantenimiento Integral">
       <div class="container hero-grid">
         <div class="hero-content reveal">
-          <p class="eyebrow">+10 años de experiencia · Madrid · Toledo · Ávila</p>
+          <p class="eyebrow">Madrid · Toledo · Ávila y alrededores</p>
           <h1>Jardines, parcelas y piscinas siempre a punto.</h1>
           <p class="hero-lead">
-            Mantenimiento integral de exteriores: poda de árboles, corte de setos, limpieza de parcelas, cuidado de jardines, puesta a punto de piscinas y mantenimiento de piscinas para particulares, comunidades y empresas.
+            Poda de árboles, corte de setos, limpieza de parcelas, mantenimiento de jardines, puesta a punto y mantenimiento de piscinas para particulares, comunidades y empresas.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contacto">Pedir presupuesto sin compromiso</a>
+            <a class="btn btn-primary" href="#contacto">Pedir presupuesto</a>
             <a class="btn btn-ghost" href="tel:+34608681863">Llamar ahora</a>
           </div>
 
           <div class="trust-row" aria-label="Ventajas del servicio">
             <div>
+              <strong>+10 años</strong>
+              <span>Experiencia en exteriores</span>
+            </div>
+            <div>
               <strong>Respuesta rápida</strong>
               <span>Contacto directo por WhatsApp</span>
             </div>
             <div>
-              <strong>Trabajo limpio</strong>
-              <span>Acabados cuidados y profesionales</span>
-            </div>
-            <div>
-              <strong>Servicio local</strong>
-              <span>Madrid, Toledo, Ávila y alrededores</span>
+              <strong>Sin compromiso</strong>
+              <span>Presupuesto personalizado</span>
             </div>
           </div>
         </div>
 
         <div class="hero-media reveal" data-delay="120">
-          <img src="foto1.jpeg" alt="Trabajo de mantenimiento de jardines, parcelas y exteriores" fetchpriority="high" />
-          <div class="floating-card floating-card-main">
-            <span>Especialistas en</span>
-            <strong>Jardines · Parcelas · Piscinas</strong>
-          </div>
-          <div class="floating-card floating-card-secondary">
-            <span>Presupuesto</span>
-            <strong>Sin compromiso</strong>
+          <img src="fotoprincipal.jpg" alt="Jardín cuidado con piscina, césped y exterior mantenido" width="1122" height="1402" fetchpriority="high" />
+          <div class="floating-card">
+            <span>Servicio integral</span>
+            <strong>Jardinería · Parcelas · Piscinas</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section intro-strip" aria-label="Resumen de servicios">
-      <div class="container intro-grid reveal">
-        <article>
-          <span>01</span>
-          <h2>Jardinería profesional</h2>
-          <p>Poda, setos, mantenimiento de jardines y limpieza de zonas verdes para dejar cada espacio cuidado y seguro.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h2>Parcelas y terrenos</h2>
-          <p>Desbroce, retirada de vegetación y limpieza de parcelas para recuperar exteriores y prevenir acumulación de maleza.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h2>Piscinas listas para usar</h2>
-          <p>Puesta a punto y mantenimiento de piscinas para temporada, viviendas, comunidades y fincas.</p>
-        </article>
+    <section class="section feature-strip" aria-label="Servicios principales resumidos">
+      <div class="container feature-grid reveal">
+        <a href="#servicios"><span>🌳</span>Poda de árboles</a>
+        <a href="#servicios"><span>✂️</span>Corte de setos</a>
+        <a href="#servicios"><span>🍃</span>Limpieza de parcelas</a>
+        <a href="#piscinas"><span>💧</span>Puesta a punto de piscinas</a>
       </div>
     </section>
 
@@ -219,131 +198,164 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Servicios</p>
           <h2>Mantenimiento exterior completo</h2>
-          <p>Soluciones claras para jardines, parcelas, zonas verdes y piscinas en Madrid, Toledo, Ávila y alrededores.</p>
+          <p>Soluciones profesionales para dejar jardines, parcelas, zonas verdes y piscinas en perfecto estado durante todo el año.</p>
         </div>
 
         <div class="services-grid">
-          <article class="service-card featured reveal">
-            <img src="arbol1.jpeg" alt="Poda de árboles en jardines y parcelas" loading="lazy" />
+          <article class="service-card reveal">
+            <img src="arbol1.jpeg" alt="Servicio de poda de árboles en Madrid, Toledo y Ávila" loading="lazy" decoding="async" />
             <div>
               <span class="service-icon" aria-hidden="true">🌳</span>
               <h3>Poda de árboles</h3>
-              <p>Mantenimiento del arbolado, retirada de ramas y mejora de seguridad en viviendas, fincas, comunidades y empresas.</p>
-              <button type="button" class="mini-cta" data-service="Poda de árboles">Pedir presupuesto</button>
+              <p>Poda, saneamiento y retirada de ramas para mejorar la seguridad y el aspecto del arbolado.</p>
+              <button class="text-link quick-service" type="button" data-service="Poda de árboles">Pedir este servicio</button>
             </div>
           </article>
 
           <article class="service-card reveal" data-delay="80">
-            <img src="seto3.jpeg" alt="Corte y perfilado de setos" loading="lazy" />
+            <img src="seto3.jpeg" alt="Corte y perfilado de setos" loading="lazy" decoding="async" />
             <div>
               <span class="service-icon" aria-hidden="true">✂️</span>
               <h3>Corte de setos</h3>
-              <p>Recorte, perfilado, rebaje de altura y limpieza para jardines más ordenados, presentables y fáciles de mantener.</p>
-              <button type="button" class="mini-cta" data-service="Corte de setos">Pedir presupuesto</button>
+              <p>Recorte, perfilado y limpieza para jardines ordenados, cuidados y presentables.</p>
+              <button class="text-link quick-service" type="button" data-service="Corte de setos">Pedir este servicio</button>
             </div>
           </article>
 
           <article class="service-card reveal" data-delay="160">
-            <img src="valla1.jpeg" alt="Limpieza de parcelas, vallados y terrenos" loading="lazy" />
+            <img src="valla1.jpeg" alt="Limpieza de parcelas y terrenos" loading="lazy" decoding="async" />
             <div>
               <span class="service-icon" aria-hidden="true">🍃</span>
               <h3>Limpieza de parcelas</h3>
-              <p>Desbroce, retirada de hierbas, limpieza de terrenos y recuperación de espacios exteriores con acabado profesional.</p>
-              <button type="button" class="mini-cta" data-service="Limpieza de parcelas">Pedir presupuesto</button>
+              <p>Desbroce, retirada de vegetación y limpieza de terrenos para recuperar espacios exteriores.</p>
+              <button class="text-link quick-service" type="button" data-service="Limpieza de parcelas">Pedir este servicio</button>
             </div>
           </article>
 
           <article class="service-card reveal" data-delay="240">
-            <img src="foto1.jpeg" alt="Mantenimiento de jardines y exteriores" loading="lazy" />
+            <img src="foto1.jpeg" alt="Mantenimiento de jardines y zonas verdes" loading="lazy" decoding="async" />
             <div>
               <span class="service-icon" aria-hidden="true">🧰</span>
               <h3>Mantenimiento de jardines</h3>
-              <p>Cuidado general de zonas verdes, jardines particulares, comunidades, chalets, fincas y exteriores de empresas.</p>
-              <button type="button" class="mini-cta" data-service="Mantenimiento de jardines">Pedir presupuesto</button>
+              <p>Cuidado general de césped, zonas comunes, exteriores de viviendas, comunidades y empresas.</p>
+              <button class="text-link quick-service" type="button" data-service="Mantenimiento de jardines">Pedir este servicio</button>
             </div>
           </article>
 
-          <article class="service-card pool-card reveal" data-delay="320">
-            <div class="service-visual no-photo" aria-hidden="true">
-              <span>💧</span>
-            </div>
+          <article class="service-card service-card-featured reveal" data-delay="320">
+            <img src="puestaapunto.jpg" alt="Puesta a punto de piscinas antes y después" width="940" height="788" loading="lazy" decoding="async" />
             <div>
-              <span class="service-icon" aria-hidden="true">🏊</span>
+              <span class="service-icon pool" aria-hidden="true">💧</span>
               <h3>Puesta a punto de piscinas</h3>
-              <p>Preparación de piscina antes de la temporada: limpieza inicial, revisión visual, tratamiento básico y puesta en marcha.</p>
-              <button type="button" class="mini-cta" data-service="Puesta a punto de piscinas">Pedir presupuesto</button>
+              <p>Limpieza inicial, preparación para temporada y recuperación del agua para dejar la piscina lista.</p>
+              <button class="text-link quick-service" type="button" data-service="Puesta a punto de piscinas">Pedir este servicio</button>
             </div>
           </article>
 
-          <article class="service-card pool-card reveal" data-delay="400">
-            <div class="service-visual no-photo" aria-hidden="true">
-              <span>🫧</span>
-            </div>
+          <article class="service-card service-card-featured reveal" data-delay="400">
+            <img src="mantenimientopiscinas.jpg" alt="Material para mantenimiento de piscinas" width="500" height="334" loading="lazy" decoding="async" />
             <div>
-              <span class="service-icon" aria-hidden="true">🔧</span>
+              <span class="service-icon pool" aria-hidden="true">🧪</span>
               <h3>Mantenimiento de piscinas</h3>
-              <p>Mantenimiento periódico para piscinas de viviendas, comunidades y fincas: limpieza, control y cuidado continuado.</p>
-              <button type="button" class="mini-cta" data-service="Mantenimiento de piscinas">Pedir presupuesto</button>
+              <p>Control, limpieza, mantenimiento periódico y revisión visual para disfrutar de una piscina cuidada.</p>
+              <button class="text-link quick-service" type="button" data-service="Mantenimiento de piscinas">Pedir este servicio</button>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="split-section section-glow" id="zonas">
-      <div class="container split-grid">
-        <div class="split-content reveal">
-          <p class="eyebrow">SEO local · Zonas de servicio</p>
-          <h2>Servicios de jardinería, parcelas y piscinas en Madrid, Toledo y Ávila.</h2>
+    <section class="section pool-section section-glow" id="piscinas">
+      <div class="container pool-grid">
+        <div class="pool-gallery reveal">
+          <button class="image-button image-button-large" type="button" data-full="puestaapunto.jpg" data-caption="Puesta a punto de piscina: antes y después">
+            <img src="puestaapunto.jpg" alt="Piscina antes y después de una puesta a punto" width="940" height="788" loading="lazy" decoding="async" />
+          </button>
+          <button class="image-button" type="button" data-full="mantenimientopiscinas.jpg" data-caption="Material y equipo para mantenimiento de piscinas">
+            <img src="mantenimientopiscinas.jpg" alt="Equipo de mantenimiento y análisis de piscina" width="500" height="334" loading="lazy" decoding="async" />
+          </button>
+        </div>
+
+        <div class="split-content reveal" data-delay="120">
+          <p class="eyebrow">Servicio de piscinas</p>
+          <h2>Tu piscina preparada para disfrutarla.</h2>
           <p>
-            Trabajamos en Madrid, Toledo, Ávila y alrededores, ofreciendo atención cercana para poda de árboles, corte de setos, limpieza de parcelas, mantenimiento de jardines, puesta a punto de piscinas y mantenimiento de piscinas.
+            Realizamos puesta a punto de piscinas para temporada y mantenimiento periódico para que el agua y el entorno se mantengan cuidados. Ideal para viviendas, chalets, comunidades y fincas.
           </p>
           <ul class="check-list">
-            <li>Atención para particulares, comunidades, chalets, fincas y empresas.</li>
-            <li>Presupuesto sin compromiso por WhatsApp, teléfono o email.</li>
-            <li>Servicios puntuales y mantenimientos periódicos según la necesidad del cliente.</li>
-            <li>Desplazamiento a municipios cercanos de Madrid, Toledo y Ávila.</li>
+            <li>Puesta a punto al inicio de temporada.</li>
+            <li>Limpieza de fondo, superficie y zona exterior.</li>
+            <li>Mantenimiento de piscinas en Madrid, Toledo y Ávila.</li>
+            <li>Servicio combinado de jardín, parcela y piscina.</li>
+          </ul>
+          <div class="mini-cta">
+            <a class="btn btn-primary" href="https://wa.me/34608681863?text=Hola%2C%20quiero%20presupuesto%20para%20piscina" target="_blank" rel="noopener noreferrer">Presupuesto de piscina</a>
+            <a class="btn btn-ghost" href="#trabajos">Ver fotos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="zonas">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SEO local · Zonas de trabajo</p>
+          <h2>Servicio en Madrid, Toledo, Ávila y alrededores</h2>
+          <p>Nos desplazamos para trabajos de jardinería, limpieza de parcelas y mantenimiento de piscinas en las principales zonas de estas provincias.</p>
+        </div>
+
+        <div class="zones-grid">
+          <article class="zone-card reveal">
+            <span>Madrid</span>
+            <h3>Jardinería y piscinas en Madrid</h3>
+            <p>Servicios para viviendas, comunidades, chalets, fincas y empresas en Madrid capital y alrededores.</p>
+            <small>Jardines · Setos · Parcelas · Piscinas</small>
+          </article>
+          <article class="zone-card reveal" data-delay="100">
+            <span>Toledo</span>
+            <h3>Mantenimiento exterior en Toledo</h3>
+            <p>Limpieza de parcelas, poda, mantenimiento de jardines y puesta a punto de piscinas en Toledo y alrededores.</p>
+            <small>Terrenos · Piscinas · Zonas verdes</small>
+          </article>
+          <article class="zone-card reveal" data-delay="200">
+            <span>Ávila</span>
+            <h3>Servicios de jardín y piscina en Ávila</h3>
+            <p>Trabajos de mantenimiento exterior para casas, fincas y comunidades en Ávila y municipios cercanos.</p>
+            <small>Poda · Desbroce · Mantenimiento</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-section section-glow">
+      <div class="container split-grid">
+        <div class="split-content reveal">
+          <p class="eyebrow">Por qué elegirnos</p>
+          <h2>Trabajo serio, cercano y adaptado a cada espacio.</h2>
+          <p>
+            Cada jardín, parcela o piscina necesita una solución distinta. Revisamos el trabajo, escuchamos lo que necesitas y preparamos una propuesta clara para hacerlo de forma rápida y profesional.
+          </p>
+          <ul class="check-list">
+            <li>Atención en Madrid, Toledo, Ávila y alrededores.</li>
+            <li>Presupuesto sin compromiso.</li>
+            <li>Trabajos para particulares, comunidades y empresas.</li>
+            <li>Contacto directo por teléfono, WhatsApp e email.</li>
           </ul>
         </div>
 
-        <div class="areas-panel reveal" data-delay="120" aria-label="Áreas de servicio">
-          <article>
-            <h3>Madrid y alrededores</h3>
-            <p>Madrid capital, Móstoles, Alcorcón, Leganés, Getafe, Fuenlabrada, Pozuelo, Majadahonda, Las Rozas, Boadilla y otras zonas cercanas.</p>
-          </article>
-          <article>
-            <h3>Toledo y alrededores</h3>
-            <p>Toledo, Illescas, Seseña, Torrijos, Talavera de la Reina y municipios próximos según disponibilidad.</p>
-          </article>
-          <article>
-            <h3>Ávila y alrededores</h3>
-            <p>Ávila, alrededores y zonas cercanas para trabajos de jardinería, parcelas y piscinas.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section local-copy" aria-label="Servicios por zona">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Servicio local especializado</p>
-          <h2>Jardineros y mantenimiento de piscinas cerca de ti</h2>
-          <p>Textos optimizados para que Google entienda claramente qué hacemos y dónde trabajamos.</p>
-        </div>
-
-        <div class="local-grid">
-          <article class="local-card reveal">
-            <h3>Jardinería y piscinas en Madrid</h3>
-            <p>Servicio de jardinería en Madrid para poda de árboles, corte de setos, mantenimiento de jardines, limpieza de parcelas y mantenimiento de piscinas en viviendas, comunidades y empresas.</p>
-          </article>
-          <article class="local-card reveal" data-delay="80">
-            <h3>Mantenimiento exterior en Toledo</h3>
-            <p>Trabajos de limpieza de parcelas, poda, setos, jardines y puesta a punto de piscinas en Toledo y alrededores, con presupuesto personalizado según el espacio.</p>
-          </article>
-          <article class="local-card reveal" data-delay="160">
-            <h3>Parcelas, jardines y piscinas en Ávila</h3>
-            <p>Atención para fincas, chalets, parcelas y jardines en Ávila y alrededores, incluyendo mantenimiento de exteriores y piscinas durante la temporada.</p>
-          </article>
+        <div class="stats-panel reveal" data-delay="120">
+          <div>
+            <strong>+10</strong>
+            <span>años de experiencia</span>
+          </div>
+          <div>
+            <strong>3</strong>
+            <span>provincias principales: Madrid, Toledo y Ávila</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>presupuesto personalizado</span>
+          </div>
         </div>
       </div>
     </section>
@@ -351,9 +363,9 @@
     <section class="section" id="trabajos">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Trabajos realizados</p>
-          <h2>Antes y después</h2>
-          <p>Galería con ejemplos reales de limpieza de parcelas, mantenimiento de setos y zonas exteriores.</p>
+          <p class="eyebrow">Trabajos y resultados</p>
+          <h2>Galería de jardinería, parcelas y piscinas</h2>
+          <p>Ejemplos visuales de mantenimiento exterior, limpieza de parcelas, corte de setos y servicios de piscina.</p>
         </div>
 
         <div class="gallery-block reveal">
@@ -363,13 +375,13 @@
           </div>
           <div class="gallery-grid">
             <button class="gallery-item" type="button" data-full="antes1.jpeg" data-caption="Parcela antes del trabajo">
-              <img src="antes1.jpeg" alt="Parcela antes del trabajo de limpieza" loading="lazy" />
+              <img src="antes1.jpeg" alt="Parcela antes del trabajo" loading="lazy" decoding="async" />
             </button>
             <button class="gallery-item" type="button" data-full="antes2.jpeg" data-caption="Terreno antes de la limpieza">
-              <img src="antes2.jpeg" alt="Terreno antes de limpieza de parcela" loading="lazy" />
+              <img src="antes2.jpeg" alt="Terreno antes de la limpieza" loading="lazy" decoding="async" />
             </button>
             <button class="gallery-item" type="button" data-full="seto2.jpeg" data-caption="Seto antes del mantenimiento">
-              <img src="seto2.jpeg" alt="Seto antes de corte y mantenimiento" loading="lazy" />
+              <img src="seto2.jpeg" alt="Seto antes del mantenimiento" loading="lazy" decoding="async" />
             </button>
           </div>
         </div>
@@ -381,16 +393,17 @@
           </div>
           <div class="gallery-grid">
             <button class="gallery-item" type="button" data-full="despues1.jpeg" data-caption="Parcela después del trabajo">
-              <img src="despues1.jpeg" alt="Parcela después de limpieza y mantenimiento" loading="lazy" />
+              <img src="despues1.jpeg" alt="Parcela después del trabajo" loading="lazy" decoding="async" />
             </button>
             <button class="gallery-item" type="button" data-full="despues2.jpeg" data-caption="Terreno limpio después del mantenimiento">
-              <img src="despues2.jpeg" alt="Terreno limpio después del mantenimiento exterior" loading="lazy" />
+              <img src="despues2.jpeg" alt="Terreno limpio después del mantenimiento" loading="lazy" decoding="async" />
             </button>
             <button class="gallery-item" type="button" data-full="seto1.jpeg" data-caption="Setos recortados y perfilados">
-              <img src="seto1.jpeg" alt="Setos recortados y perfilados" loading="lazy" />
+              <img src="seto1.jpeg" alt="Setos recortados y perfilados" loading="lazy" decoding="async" />
             </button>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -399,24 +412,24 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Cómo trabajamos</p>
           <h2>Un proceso sencillo para empezar rápido</h2>
-          <p>Envía tu consulta y preparamos una respuesta adaptada al servicio y la zona donde se encuentra el trabajo.</p>
+          <p>Envía tu consulta y preparamos una respuesta adaptada al tipo de trabajo que necesitas.</p>
         </div>
 
         <div class="steps-grid">
           <article class="step-card reveal">
             <span>01</span>
             <h3>Contacto</h3>
-            <p>Cuéntanos qué necesitas por WhatsApp, llamada, email o formulario.</p>
+            <p>Cuéntanos qué necesitas por WhatsApp, llamada o formulario.</p>
           </article>
           <article class="step-card reveal" data-delay="80">
             <span>02</span>
             <h3>Valoración</h3>
-            <p>Revisamos servicio, zona, fotos y detalles para orientarte mejor.</p>
+            <p>Revisamos zona, servicio, fotos si las tienes y detalles del trabajo.</p>
           </article>
           <article class="step-card reveal" data-delay="160">
             <span>03</span>
             <h3>Presupuesto</h3>
-            <p>Recibes una propuesta clara, sin compromiso y ajustada al trabajo.</p>
+            <p>Recibes una propuesta clara, sin compromiso y ajustada al servicio.</p>
           </article>
           <article class="step-card reveal" data-delay="240">
             <span>04</span>
@@ -427,34 +440,30 @@
       </div>
     </section>
 
-    <section class="section faq-section" id="faq">
+    <section class="section" id="faq">
       <div class="container faq-grid">
-        <div class="faq-copy reveal">
+        <div class="section-heading reveal">
           <p class="eyebrow">Preguntas frecuentes</p>
-          <h2>Información útil antes de pedir presupuesto</h2>
-          <p>Contenido visible y útil para clientes y para SEO local, sin añadir datos no confirmados como reseñas, horarios o dirección.</p>
+          <h2>Dudas habituales antes de pedir presupuesto</h2>
+          <p>Información útil para trabajos de jardinería, parcelas y piscinas en Madrid, Toledo y Ávila.</p>
         </div>
 
         <div class="faq-list reveal" data-delay="120">
           <details open>
             <summary>¿En qué zonas trabajáis?</summary>
-            <p>Realizamos servicios en Madrid, Toledo, Ávila y alrededores. Indica tu municipio al pedir presupuesto para confirmar disponibilidad.</p>
+            <p>Trabajamos en Madrid, Toledo, Ávila y alrededores. Puedes indicarnos tu localidad por WhatsApp y te confirmamos disponibilidad.</p>
           </details>
           <details>
             <summary>¿Hacéis puesta a punto de piscinas?</summary>
-            <p>Sí. Hacemos puesta a punto de piscinas antes de la temporada, limpieza inicial, revisión visual y preparación para su uso.</p>
+            <p>Sí. Realizamos puesta a punto de piscinas, limpieza inicial, preparación para temporada y mantenimiento periódico.</p>
           </details>
           <details>
-            <summary>¿También hacéis mantenimiento de piscinas?</summary>
-            <p>Sí. Ofrecemos mantenimiento de piscinas para viviendas, comunidades y fincas, con trabajos puntuales o periódicos según cada caso.</p>
+            <summary>¿También hacéis mantenimiento de jardines?</summary>
+            <p>Sí. Podemos encargarnos de jardines, setos, árboles, parcelas y zonas exteriores de viviendas, comunidades y empresas.</p>
           </details>
           <details>
             <summary>¿El presupuesto es sin compromiso?</summary>
-            <p>Sí. Puedes enviar los datos por WhatsApp, teléfono o email y prepararemos una valoración adaptada al servicio, zona y tamaño del trabajo.</p>
-          </details>
-          <details>
-            <summary>¿Trabajáis para comunidades y empresas?</summary>
-            <p>Sí. Además de particulares, realizamos trabajos para comunidades, empresas, fincas, chalets y espacios exteriores con mantenimiento recurrente.</p>
+            <p>Sí. El presupuesto es personalizado y sin compromiso. El formulario prepara un mensaje de WhatsApp para que sea rápido.</p>
           </details>
         </div>
       </div>
@@ -466,7 +475,7 @@
           <p class="eyebrow">Contacto</p>
           <h2>Pide tu presupuesto sin compromiso</h2>
           <p>
-            Dinos qué trabajo necesitas, en qué provincia o municipio estás y cómo podemos contactar contigo. Al enviar el formulario se abrirá WhatsApp con el mensaje preparado.
+            Dinos qué servicio necesitas, en qué zona estás y cómo podemos contactar contigo. Al enviar el formulario se abrirá WhatsApp con el mensaje preparado.
           </p>
 
           <div class="contact-cards">
@@ -491,6 +500,9 @@
             <a class="social facebook" href="https://www.facebook.com/profile.php?id=61577876143836" target="_blank" rel="noopener noreferrer">
               Facebook
             </a>
+            <a class="social whatsapp-social" href="https://wa.me/34608681863" target="_blank" rel="noopener noreferrer">
+              WhatsApp
+            </a>
           </div>
         </div>
 
@@ -512,22 +524,11 @@
             </label>
 
             <label>
-              Provincia
-              <select id="provincia" name="provincia" required>
-                <option value="">Selecciona provincia</option>
-                <option>Madrid</option>
-                <option>Toledo</option>
-                <option>Ávila</option>
-                <option>Alrededores</option>
-              </select>
+              Zona / localidad
+              <input type="text" id="zona" name="zona" placeholder="Ej: Madrid, Toledo, Ávila, Móstoles..." />
             </label>
 
             <label>
-              Zona / municipio
-              <input type="text" id="zona" name="zona" placeholder="Ej: Móstoles, Toledo, Ávila..." />
-            </label>
-
-            <label class="full-field">
               Servicio
               <select id="servicio" name="servicio" required>
                 <option value="">Selecciona un servicio</option>
@@ -537,14 +538,14 @@
                 <option>Mantenimiento de jardines</option>
                 <option>Puesta a punto de piscinas</option>
                 <option>Mantenimiento de piscinas</option>
-                <option>Jardinería y piscina</option>
+                <option>Jardín y piscina</option>
                 <option>Otro</option>
               </select>
             </label>
 
             <label class="full-field">
               Detalles del trabajo
-              <textarea id="mensaje" name="mensaje" placeholder="Describe el trabajo, tamaño aproximado, estado actual y si puedes enviar fotos por WhatsApp"></textarea>
+              <textarea id="mensaje" name="mensaje" placeholder="Describe el trabajo, tamaño aproximado, estado actual, localidad y cualquier detalle útil"></textarea>
             </label>
           </div>
 
@@ -562,7 +563,7 @@
           <img src="logo.jpeg" alt="Logo JL Mantenimiento Integral" width="46" height="46" />
           <strong>JL Mantenimiento Integral</strong>
         </a>
-        <p>Jardinería, poda, corte de setos, limpieza de parcelas y piscinas en Madrid, Toledo, Ávila y alrededores.</p>
+        <p>Jardinería, poda, corte de setos, limpieza de parcelas, puesta a punto y mantenimiento de piscinas en Madrid, Toledo, Ávila y alrededores.</p>
       </div>
 
       <div>
@@ -571,8 +572,8 @@
         <a href="#servicios">Corte de setos</a>
         <a href="#servicios">Limpieza de parcelas</a>
         <a href="#servicios">Mantenimiento de jardines</a>
-        <a href="#servicios">Puesta a punto de piscinas</a>
-        <a href="#servicios">Mantenimiento de piscinas</a>
+        <a href="#piscinas">Puesta a punto de piscinas</a>
+        <a href="#piscinas">Mantenimiento de piscinas</a>
       </div>
 
       <div>

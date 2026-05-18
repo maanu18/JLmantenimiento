@@ -2,6 +2,7 @@ const phoneNumber = '34608681863';
 const form = document.getElementById('presupuestoForm');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
+const navLinks = document.querySelectorAll('.main-nav a');
 const backToTop = document.querySelector('.back-to-top');
 const year = document.getElementById('year');
 const lightbox = document.getElementById('lightbox');
@@ -9,10 +10,10 @@ const lightboxImage = lightbox?.querySelector('img');
 const lightboxCaption = lightbox?.querySelector('p');
 const lightboxClose = lightbox?.querySelector('.lightbox-close');
 
-const fields = ['nombre', 'telefono', 'provincia', 'zona', 'servicio', 'mensaje'];
-const storageKey = 'jl_presupuesto_form_v2';
+const fields = ['nombre', 'telefono', 'zona', 'servicio', 'mensaje'];
+const storageKey = 'jl_presupuesto_form';
 
-year.textContent = new Date().getFullYear();
+if (year) year.textContent = new Date().getFullYear();
 
 function closeMenu() {
   document.body.classList.remove('menu-open');
@@ -44,6 +45,7 @@ function getFormData() {
 }
 
 function saveForm() {
+  if (!form) return;
   localStorage.setItem(storageKey, JSON.stringify(getFormData()));
 }
 
@@ -63,16 +65,7 @@ function loadForm() {
 }
 
 function buildWhatsAppMessage(data) {
-  return `Hola, soy ${data.nombre}.
-Quiero solicitar presupuesto para JL Mantenimiento Integral.
-
-Teléfono: ${data.telefono}
-Provincia: ${data.provincia || 'No indicada'}
-Zona / municipio: ${data.zona || 'No indicado'}
-Servicio: ${data.servicio}
-Detalles: ${data.mensaje || 'Sin detalles adicionales'}
-
-Gracias.`;
+  return `Hola, soy ${data.nombre}.\nQuiero solicitar presupuesto con JL Mantenimiento Integral.\n\nTeléfono: ${data.telefono}\nZona / localidad: ${data.zona || 'No indicada'}\nServicio: ${data.servicio}\nDetalles: ${data.mensaje || 'Sin detalles adicionales'}\n\nGracias.`;
 }
 
 loadForm();
@@ -93,16 +86,18 @@ form?.addEventListener('submit', (event) => {
   window.open(url, '_blank', 'noopener,noreferrer');
 });
 
-document.querySelectorAll('[data-service]').forEach((button) => {
+document.querySelectorAll('.quick-service').forEach((button) => {
   button.addEventListener('click', () => {
     const service = button.dataset.service;
-    const serviceSelect = document.getElementById('servicio');
+    const select = document.getElementById('servicio');
+    const message = document.getElementById('mensaje');
 
-    if (serviceSelect && service) {
-      serviceSelect.value = service;
-      saveForm();
+    if (select && service) select.value = service;
+    if (message && !message.value.trim()) {
+      message.value = `Hola, quiero información sobre ${service}.`;
     }
 
+    saveForm();
     document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
@@ -132,8 +127,25 @@ function updateBackToTop() {
   }
 }
 
-window.addEventListener('scroll', updateBackToTop, { passive: true });
+function updateActiveNavLink() {
+  const sections = [...document.querySelectorAll('section[id]')];
+  const current = sections
+    .filter((section) => section.getBoundingClientRect().top <= 140)
+    .pop();
+
+  navLinks.forEach((link) => {
+    const isActive = current && link.getAttribute('href') === `#${current.id}`;
+    link.classList.toggle('is-active', Boolean(isActive));
+  });
+}
+
+window.addEventListener('scroll', () => {
+  updateBackToTop();
+  updateActiveNavLink();
+}, { passive: true });
+
 updateBackToTop();
+updateActiveNavLink();
 
 backToTop?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -147,6 +159,7 @@ function openLightbox(src, caption, alt) {
   lightbox.classList.add('is-open');
   lightbox.setAttribute('aria-hidden', 'false');
   document.body.classList.add('lightbox-open');
+  lightboxClose?.focus();
 }
 
 function closeLightbox() {
@@ -159,7 +172,7 @@ function closeLightbox() {
   }, 180);
 }
 
-document.querySelectorAll('.gallery-item').forEach((button) => {
+document.querySelectorAll('.gallery-item, .image-button').forEach((button) => {
   button.addEventListener('click', () => {
     const image = button.querySelector('img');
     openLightbox(button.dataset.full, button.dataset.caption, image?.alt);
