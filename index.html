@@ -1,863 +1,614 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>JL Mantenimiento Integral | Jardinería en Madrid</title>
-<meta name="description" content="Poda de árboles, corte de setos, limpieza de parcelas y mantenimiento de jardines en Madrid y alrededores.">
-
-<link rel="icon" href="logo.jpeg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Inter,system-ui,sans-serif;
-  background:#07110d;
-  color:#f4f8f5;
-  line-height:1.6;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-.container{
-  width:min(1200px,calc(100% - 40px));
-  margin:auto;
-}
-
-header{
-  background:#0c1511;
-  border-bottom:1px solid rgba(255,255,255,.08);
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  min-height:80px;
-  gap:20px;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-weight:800;
-}
-
-.logo img{
-  width:44px;
-  height:44px;
-  border-radius:12px;
-  object-fit:cover;
-}
-
-nav ul{
-  display:flex;
-  gap:24px;
-  list-style:none;
-}
-
-nav a{
-  color:#d7e3db;
-  text-decoration:none;
-  font-weight:500;
-}
-
-nav a:hover{
-  color:#79e8ad;
-}
-
-.btn{
-  padding:12px 22px;
-  background:linear-gradient(135deg,#79e8ad,#2ecb75);
-  border-radius:999px;
-  color:#062114;
-  font-weight:700;
-  text-decoration:none;
-  display:inline-block;
-  border:none;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-.btn-outline{
-  padding:12px 22px;
-  border:1px solid rgba(255,255,255,.16);
-  border-radius:999px;
-  color:#f4f8f5;
-  font-weight:700;
-  text-decoration:none;
-  display:inline-block;
-  transition:.2s;
-}
-
-.btn-outline:hover{
-  border-color:#79e8ad;
-  color:#79e8ad;
-  transform:translateY(-2px);
-}
-
-.hero{
-  padding:80px 0;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:50px;
-  align-items:center;
-}
-
-.hero-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:8px 14px;
-  border:1px solid rgba(121,232,173,.22);
-  background:rgba(121,232,173,.08);
-  color:#b9f7d1;
-  border-radius:999px;
-  font-size:.92rem;
-  font-weight:600;
-  margin-bottom:18px;
-}
-
-.hero h1{
-  font-size:clamp(2.4rem,5vw,4.2rem);
-  line-height:1.05;
-  margin-bottom:20px;
-  max-width:11ch;
-}
-
-.lead{
-  color:#b7c4bc;
-  margin-bottom:26px;
-  max-width:58ch;
-  font-size:1.12rem;
-}
-
-.hero-points{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-bottom:28px;
-}
-
-.hero-points span{
-  padding:8px 14px;
-  border-radius:999px;
-  background:#0e1b15;
-  border:1px solid rgba(255,255,255,.08);
-  color:#d7e3db;
-  font-size:.92rem;
-  font-weight:600;
-}
-
-.hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
-
-.hero-image-wrap{
-  position:relative;
-}
-
-.hero-image-wrap::before{
-  content:"";
-  position:absolute;
-  inset:auto -20px -20px auto;
-  width:180px;
-  height:180px;
-  background:radial-gradient(circle, rgba(121,232,173,.16), transparent 70%);
-  z-index:0;
-}
-
-.hero img{
-  width:100%;
-  height:660px;
-  object-fit:cover;
-  border-radius:28px;
-  position:relative;
-  z-index:1;
-  border:1px solid rgba(255,255,255,.08);
-}
-
-.section{
-  padding:80px 0;
-}
-
-.section h2{
-  font-size:2.4rem;
-  margin-bottom:10px;
-}
-
-.section p{
-  color:#a7b6ad;
-  margin-bottom:40px;
-}
-
-.services{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:25px;
-}
-
-.card{
-  background:#0e1b15;
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:24px;
-  overflow:hidden;
-}
-
-.card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-.card-body{
-  padding:22px;
-}
-
-.card-body h3{
-  margin-bottom:10px;
-}
-
-.card-body p{
-  color:#a7b6ad;
-  font-size:.95rem;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-
-.gallery img{
-  width:100%;
-  border-radius:20px;
-}
-
-.work-block{
-  margin-bottom:50px;
-}
-
-.work-block h3{
-  margin-bottom:20px;
-  font-size:1.5rem;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  margin-top:40px;
-}
-
-.contact-box{
-  background:#0e1b15;
-  padding:30px;
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,.08);
-}
-
-.contact-box h3{
-  margin-bottom:18px;
-}
-
-.contact-item{
-  margin-bottom:18px;
-}
-
-.contact-label{
-  color:#9db2a8;
-  font-size:.9rem;
-}
-
-.contact-value{
-  font-weight:600;
-  margin-top:4px;
-}
-
-.contact-box a{
-  color:#79e8ad;
-  text-decoration:none;
-}
-
-.contact-socials{
-  margin-top:24px;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
-.social-btn{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:14px 18px;
-  border-radius:14px;
-  font-weight:700;
-  text-decoration:none;
-  width:100%;
-  transition:.2s;
-}
-
-.social-btn svg{
-  width:20px;
-  height:20px;
-  flex-shrink:0;
-}
-
-.instagram{
-  background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
-  color:white !important;
-}
-
-.facebook{
-  background:#1877f2;
-  color:white !important;
-}
-
-.social-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 24px rgba(0,0,0,.25);
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-
-.form-group{
-  margin-bottom:16px;
-}
-
-.form-group.full{
-  grid-column:1 / -1;
-}
-
-.form-group label{
-  display:block;
-  margin-bottom:8px;
-  font-weight:600;
-  color:#f4f8f5;
-}
-
-.form-control{
-  width:100%;
-  padding:14px 16px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.10);
-  background:#08140f;
-  color:#f4f8f5;
-  outline:none;
-  font:inherit;
-}
-
-.form-control::placeholder{
-  color:#8fa69a;
-}
-
-textarea.form-control{
-  min-height:130px;
-  resize:vertical;
-}
-
-.form-note{
-  color:#9db2a8;
-  font-size:.9rem;
-  margin-top:12px;
-}
-
-footer{
-  margin-top:60px;
-  border-top:1px solid rgba(255,255,255,.08);
-  padding:50px 0 30px;
-  color:#a7b6ad;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:30px;
-}
-
-.footer-grid strong{
-  display:block;
-  margin-bottom:12px;
-  color:#f4f8f5;
-}
-
-.footer-bottom{
-  margin-top:40px;
-  border-top:1px solid rgba(255,255,255,.08);
-  padding-top:20px;
-  text-align:center;
-  font-size:.9rem;
-}
-
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  background:#25D366;
-  padding:14px 20px;
-  border-radius:999px;
-  color:#072113;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 12px 26px rgba(0,0,0,.28);
-}
-
-@media(max-width:900px){
-  .hero-grid{
-    grid-template-columns:1fr;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07110d" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <title>JL Mantenimiento Integral | Jardinería y Piscinas en Madrid, Toledo y Ávila</title>
+  <meta name="description" content="Jardinería, poda, limpieza de parcelas y mantenimiento de piscinas en Madrid, Toledo, Ávila y alrededores. Presupuesto por WhatsApp." />
+  <meta name="keywords" content="jardinería Madrid, mantenimiento piscinas Madrid, puesta a punto piscinas, poda árboles Toledo, limpieza parcelas Ávila, corte setos Madrid, mantenimiento jardines Toledo, jardineros Ávila" />
+  <meta name="author" content="JL Mantenimiento Integral" />
+
+  <meta property="og:title" content="JL Mantenimiento Integral | Jardinería y piscinas" />
+  <meta property="og:description" content="Mantenimiento de jardines, parcelas, setos, árboles y piscinas en Madrid, Toledo, Ávila y alrededores." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="foto1.jpeg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JL Mantenimiento Integral" />
+  <meta name="twitter:description" content="Jardinería, parcelas y piscinas en Madrid, Toledo y Ávila." />
+  <meta name="twitter:image" content="foto1.jpeg" />
+
+  <link rel="icon" href="logo.jpeg" />
+  <link rel="apple-touch-icon" href="logo.jpeg" />
+  <link rel="preload" as="image" href="foto1.jpeg" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+        "@id": "#jl-mantenimiento-integral",
+        "name": "JL Mantenimiento Integral",
+        "description": "Empresa de mantenimiento integral especializada en jardinería, poda de árboles, corte de setos, limpieza de parcelas, puesta a punto de piscinas y mantenimiento de piscinas en Madrid, Toledo, Ávila y alrededores.",
+        "image": ["foto1.jpeg", "logo.jpeg"],
+        "logo": "logo.jpeg",
+        "telephone": "+34608681863",
+        "email": "jl_mantenimiento_integral@gmail.com",
+        "priceRange": "€€",
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Madrid" },
+          { "@type": "AdministrativeArea", "name": "Toledo" },
+          { "@type": "AdministrativeArea", "name": "Ávila" }
+        ],
+        "knowsAbout": [
+          "Jardinería",
+          "Poda de árboles",
+          "Corte de setos",
+          "Limpieza de parcelas",
+          "Mantenimiento de jardines",
+          "Puesta a punto de piscinas",
+          "Mantenimiento de piscinas"
+        ],
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Poda de árboles", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corte de setos", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de parcelas", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de jardines", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Puesta a punto de piscinas", "areaServed": ["Madrid", "Toledo", "Ávila"] } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de piscinas", "areaServed": ["Madrid", "Toledo", "Ávila"] } }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+34608681863",
+          "contactType": "presupuestos y atención al cliente",
+          "areaServed": ["ES-M", "ES-CM", "ES-CL"],
+          "availableLanguage": ["es"]
+        },
+        "sameAs": [
+          "https://www.instagram.com/jl_mantenimiento_integral_",
+          "https://www.facebook.com/profile.php?id=61577876143836"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "#website",
+        "name": "JL Mantenimiento Integral",
+        "publisher": { "@id": "#jl-mantenimiento-integral" },
+        "inLanguage": "es-ES"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿En qué zonas trabaja JL Mantenimiento Integral?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "JL Mantenimiento Integral realiza servicios de jardinería, parcelas y piscinas en Madrid, Toledo, Ávila y alrededores."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hacéis puesta a punto y mantenimiento de piscinas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Se realizan trabajos de puesta a punto de piscinas, limpieza, revisión inicial y mantenimiento periódico según las necesidades del cliente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El presupuesto es sin compromiso?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Puedes solicitar presupuesto por WhatsApp, teléfono o email indicando el servicio, la zona y los detalles del trabajo."
+            }
+          }
+        ]
+      }
+    ]
   }
-
-  .hero img{
-    height:auto;
-    max-height:650px;
-  }
-
-  .services{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .gallery{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:600px){
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  .services{
-    grid-template-columns:1fr;
-  }
-
-  nav ul{
-    gap:14px;
-    flex-wrap:wrap;
-  }
-
-  .topbar{
-    padding:18px 0;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .hero{
-    padding:60px 0;
-  }
-
-  .section{
-    padding:60px 0;
-  }
-
-  .hero-actions{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .btn,
-  .btn-outline{
-    width:100%;
-    text-align:center;
-  }
-}
-</style>
+  </script>
 </head>
-
 <body>
+  <header class="site-header" id="inicio">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<header>
-  <div class="container topbar">
-    <div class="logo">
-      <img src="logo.jpeg" alt="Logo JL Mantenimiento Integral">
-      <span>JL Mantenimiento Integral</span>
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="logo.jpeg" alt="Logo de JL Mantenimiento Integral" width="56" height="56" />
+        <span>
+          <strong>JL Mantenimiento Integral</strong>
+          <small>Jardinería · Parcelas · Piscinas</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#zonas">Zonas</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="header-cta" href="https://wa.me/34608681863" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        WhatsApp
+      </a>
     </div>
+  </header>
 
-    <nav>
-      <ul>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#trabajos">Trabajos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+  <main id="contenido">
+    <section class="hero section-glow" aria-label="Presentación">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">+10 años de experiencia · Madrid · Toledo · Ávila</p>
+          <h1>Jardines, parcelas y piscinas siempre a punto.</h1>
+          <p class="hero-lead">
+            Mantenimiento integral de exteriores: poda de árboles, corte de setos, limpieza de parcelas, cuidado de jardines, puesta a punto de piscinas y mantenimiento de piscinas para particulares, comunidades y empresas.
+          </p>
 
-    <a class="btn" href="https://wa.me/34608681863" target="_blank" rel="noopener noreferrer">
-      WhatsApp
-    </a>
-  </div>
-</header>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Pedir presupuesto sin compromiso</a>
+            <a class="btn btn-ghost" href="tel:+34608681863">Llamar ahora</a>
+          </div>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="hero-badge">+10 años de experiencia en mantenimiento exterior</div>
-
-      <h1>Mantenimiento de jardines y parcelas en Madrid</h1>
-
-      <p class="lead">
-        Poda de árboles, corte de setos, limpieza de parcelas y mantenimiento de exteriores
-        para particulares, comunidades y empresas en Madrid y alrededores.
-      </p>
-
-      <div class="hero-points">
-        <span>Presupuesto sin compromiso</span>
-        <span>Atención rápida</span>
-        <span>Trabajo profesional</span>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn" href="#contacto">Pedir presupuesto</a>
-        <a class="btn-outline" href="tel:+34608681863">Llamar ahora</a>
-      </div>
-    </div>
-
-    <div class="hero-image-wrap">
-      <img src="foto1.jpeg" alt="Trabajo de jardinería en Madrid">
-    </div>
-  </div>
-</section>
-
-<section class="section" id="servicios">
-  <div class="container">
-    <h2>Servicios</h2>
-    <p>Trabajos de mantenimiento exterior para jardines, parcelas y zonas verdes.</p>
-
-    <div class="services">
-      <div class="card">
-        <img src="arbol1.jpeg" alt="Poda de árboles">
-        <div class="card-body">
-          <h3>Poda de árboles</h3>
-          <p>Mantenimiento del arbolado y mejora de seguridad.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="seto3.jpeg" alt="Corte de setos">
-        <div class="card-body">
-          <h3>Corte de setos</h3>
-          <p>Recorte y perfilado para jardines ordenados.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="valla1.jpeg" alt="Limpieza de parcelas">
-        <div class="card-body">
-          <h3>Limpieza de parcelas</h3>
-          <p>Desbroce y limpieza de terrenos.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="foto1.jpeg" alt="Mantenimiento exterior">
-        <div class="card-body">
-          <h3>Mantenimiento exterior</h3>
-          <p>Cuidado general de jardines y zonas verdes.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="trabajos">
-  <div class="container">
-    <h2>Algunos trabajos realizados</h2>
-
-    <p>
-      Ejemplos de trabajos de mantenimiento exterior y limpieza de parcelas.
-    </p>
-
-    <div class="work-block">
-      <h3>Antes del trabajo</h3>
-      <div class="gallery">
-        <img src="antes1.jpeg" alt="Parcela antes">
-        <img src="antes2.jpeg" alt="Terreno antes del trabajo">
-        <img src="seto2.jpeg" alt="Seto antes del mantenimiento">
-      </div>
-    </div>
-
-    <div class="work-block">
-      <h3>Después del trabajo</h3>
-      <div class="gallery">
-        <img src="despues1.jpeg" alt="Parcela después">
-        <img src="despues2.jpeg" alt="Terreno limpio">
-        <img src="seto1.jpeg" alt="Setos recortados">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contacto">
-  <div class="container">
-    <h2>Contacto</h2>
-    <p>Contacta para presupuesto sin compromiso.</p>
-
-    <div class="contact-grid">
-      <div class="contact-box">
-        <h3>Datos de contacto</h3>
-
-        <div class="contact-item">
-          <div class="contact-label">Teléfono</div>
-          <div class="contact-value">
-            <a href="tel:+34608681863">+34 608 68 18 63</a>
+          <div class="trust-row" aria-label="Ventajas del servicio">
+            <div>
+              <strong>Respuesta rápida</strong>
+              <span>Contacto directo por WhatsApp</span>
+            </div>
+            <div>
+              <strong>Trabajo limpio</strong>
+              <span>Acabados cuidados y profesionales</span>
+            </div>
+            <div>
+              <strong>Servicio local</strong>
+              <span>Madrid, Toledo, Ávila y alrededores</span>
+            </div>
           </div>
         </div>
 
-        <div class="contact-item">
-          <div class="contact-label">Email</div>
-          <div class="contact-value">
-            <a href="mailto:jl_mantenimiento_integral@gmail.com">
-              Jl.mantenimiento.integral.vp@gmail.com
+        <div class="hero-media reveal" data-delay="120">
+          <img src="foto1.jpeg" alt="Trabajo de mantenimiento de jardines, parcelas y exteriores" fetchpriority="high" />
+          <div class="floating-card floating-card-main">
+            <span>Especialistas en</span>
+            <strong>Jardines · Parcelas · Piscinas</strong>
+          </div>
+          <div class="floating-card floating-card-secondary">
+            <span>Presupuesto</span>
+            <strong>Sin compromiso</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-strip" aria-label="Resumen de servicios">
+      <div class="container intro-grid reveal">
+        <article>
+          <span>01</span>
+          <h2>Jardinería profesional</h2>
+          <p>Poda, setos, mantenimiento de jardines y limpieza de zonas verdes para dejar cada espacio cuidado y seguro.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Parcelas y terrenos</h2>
+          <p>Desbroce, retirada de vegetación y limpieza de parcelas para recuperar exteriores y prevenir acumulación de maleza.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Piscinas listas para usar</h2>
+          <p>Puesta a punto y mantenimiento de piscinas para temporada, viviendas, comunidades y fincas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Servicios</p>
+          <h2>Mantenimiento exterior completo</h2>
+          <p>Soluciones claras para jardines, parcelas, zonas verdes y piscinas en Madrid, Toledo, Ávila y alrededores.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card featured reveal">
+            <img src="arbol1.jpeg" alt="Poda de árboles en jardines y parcelas" loading="lazy" />
+            <div>
+              <span class="service-icon" aria-hidden="true">🌳</span>
+              <h3>Poda de árboles</h3>
+              <p>Mantenimiento del arbolado, retirada de ramas y mejora de seguridad en viviendas, fincas, comunidades y empresas.</p>
+              <button type="button" class="mini-cta" data-service="Poda de árboles">Pedir presupuesto</button>
+            </div>
+          </article>
+
+          <article class="service-card reveal" data-delay="80">
+            <img src="seto3.jpeg" alt="Corte y perfilado de setos" loading="lazy" />
+            <div>
+              <span class="service-icon" aria-hidden="true">✂️</span>
+              <h3>Corte de setos</h3>
+              <p>Recorte, perfilado, rebaje de altura y limpieza para jardines más ordenados, presentables y fáciles de mantener.</p>
+              <button type="button" class="mini-cta" data-service="Corte de setos">Pedir presupuesto</button>
+            </div>
+          </article>
+
+          <article class="service-card reveal" data-delay="160">
+            <img src="valla1.jpeg" alt="Limpieza de parcelas, vallados y terrenos" loading="lazy" />
+            <div>
+              <span class="service-icon" aria-hidden="true">🍃</span>
+              <h3>Limpieza de parcelas</h3>
+              <p>Desbroce, retirada de hierbas, limpieza de terrenos y recuperación de espacios exteriores con acabado profesional.</p>
+              <button type="button" class="mini-cta" data-service="Limpieza de parcelas">Pedir presupuesto</button>
+            </div>
+          </article>
+
+          <article class="service-card reveal" data-delay="240">
+            <img src="foto1.jpeg" alt="Mantenimiento de jardines y exteriores" loading="lazy" />
+            <div>
+              <span class="service-icon" aria-hidden="true">🧰</span>
+              <h3>Mantenimiento de jardines</h3>
+              <p>Cuidado general de zonas verdes, jardines particulares, comunidades, chalets, fincas y exteriores de empresas.</p>
+              <button type="button" class="mini-cta" data-service="Mantenimiento de jardines">Pedir presupuesto</button>
+            </div>
+          </article>
+
+          <article class="service-card pool-card reveal" data-delay="320">
+            <div class="service-visual no-photo" aria-hidden="true">
+              <span>💧</span>
+            </div>
+            <div>
+              <span class="service-icon" aria-hidden="true">🏊</span>
+              <h3>Puesta a punto de piscinas</h3>
+              <p>Preparación de piscina antes de la temporada: limpieza inicial, revisión visual, tratamiento básico y puesta en marcha.</p>
+              <button type="button" class="mini-cta" data-service="Puesta a punto de piscinas">Pedir presupuesto</button>
+            </div>
+          </article>
+
+          <article class="service-card pool-card reveal" data-delay="400">
+            <div class="service-visual no-photo" aria-hidden="true">
+              <span>🫧</span>
+            </div>
+            <div>
+              <span class="service-icon" aria-hidden="true">🔧</span>
+              <h3>Mantenimiento de piscinas</h3>
+              <p>Mantenimiento periódico para piscinas de viviendas, comunidades y fincas: limpieza, control y cuidado continuado.</p>
+              <button type="button" class="mini-cta" data-service="Mantenimiento de piscinas">Pedir presupuesto</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-section section-glow" id="zonas">
+      <div class="container split-grid">
+        <div class="split-content reveal">
+          <p class="eyebrow">SEO local · Zonas de servicio</p>
+          <h2>Servicios de jardinería, parcelas y piscinas en Madrid, Toledo y Ávila.</h2>
+          <p>
+            Trabajamos en Madrid, Toledo, Ávila y alrededores, ofreciendo atención cercana para poda de árboles, corte de setos, limpieza de parcelas, mantenimiento de jardines, puesta a punto de piscinas y mantenimiento de piscinas.
+          </p>
+          <ul class="check-list">
+            <li>Atención para particulares, comunidades, chalets, fincas y empresas.</li>
+            <li>Presupuesto sin compromiso por WhatsApp, teléfono o email.</li>
+            <li>Servicios puntuales y mantenimientos periódicos según la necesidad del cliente.</li>
+            <li>Desplazamiento a municipios cercanos de Madrid, Toledo y Ávila.</li>
+          </ul>
+        </div>
+
+        <div class="areas-panel reveal" data-delay="120" aria-label="Áreas de servicio">
+          <article>
+            <h3>Madrid y alrededores</h3>
+            <p>Madrid capital, Móstoles, Alcorcón, Leganés, Getafe, Fuenlabrada, Pozuelo, Majadahonda, Las Rozas, Boadilla y otras zonas cercanas.</p>
+          </article>
+          <article>
+            <h3>Toledo y alrededores</h3>
+            <p>Toledo, Illescas, Seseña, Torrijos, Talavera de la Reina y municipios próximos según disponibilidad.</p>
+          </article>
+          <article>
+            <h3>Ávila y alrededores</h3>
+            <p>Ávila, alrededores y zonas cercanas para trabajos de jardinería, parcelas y piscinas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section local-copy" aria-label="Servicios por zona">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Servicio local especializado</p>
+          <h2>Jardineros y mantenimiento de piscinas cerca de ti</h2>
+          <p>Textos optimizados para que Google entienda claramente qué hacemos y dónde trabajamos.</p>
+        </div>
+
+        <div class="local-grid">
+          <article class="local-card reveal">
+            <h3>Jardinería y piscinas en Madrid</h3>
+            <p>Servicio de jardinería en Madrid para poda de árboles, corte de setos, mantenimiento de jardines, limpieza de parcelas y mantenimiento de piscinas en viviendas, comunidades y empresas.</p>
+          </article>
+          <article class="local-card reveal" data-delay="80">
+            <h3>Mantenimiento exterior en Toledo</h3>
+            <p>Trabajos de limpieza de parcelas, poda, setos, jardines y puesta a punto de piscinas en Toledo y alrededores, con presupuesto personalizado según el espacio.</p>
+          </article>
+          <article class="local-card reveal" data-delay="160">
+            <h3>Parcelas, jardines y piscinas en Ávila</h3>
+            <p>Atención para fincas, chalets, parcelas y jardines en Ávila y alrededores, incluyendo mantenimiento de exteriores y piscinas durante la temporada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trabajos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Trabajos realizados</p>
+          <h2>Antes y después</h2>
+          <p>Galería con ejemplos reales de limpieza de parcelas, mantenimiento de setos y zonas exteriores.</p>
+        </div>
+
+        <div class="gallery-block reveal">
+          <div class="gallery-title">
+            <h3>Antes del trabajo</h3>
+            <span>Estado inicial</span>
+          </div>
+          <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-full="antes1.jpeg" data-caption="Parcela antes del trabajo">
+              <img src="antes1.jpeg" alt="Parcela antes del trabajo de limpieza" loading="lazy" />
+            </button>
+            <button class="gallery-item" type="button" data-full="antes2.jpeg" data-caption="Terreno antes de la limpieza">
+              <img src="antes2.jpeg" alt="Terreno antes de limpieza de parcela" loading="lazy" />
+            </button>
+            <button class="gallery-item" type="button" data-full="seto2.jpeg" data-caption="Seto antes del mantenimiento">
+              <img src="seto2.jpeg" alt="Seto antes de corte y mantenimiento" loading="lazy" />
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-block reveal">
+          <div class="gallery-title">
+            <h3>Después del trabajo</h3>
+            <span>Resultado final</span>
+          </div>
+          <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-full="despues1.jpeg" data-caption="Parcela después del trabajo">
+              <img src="despues1.jpeg" alt="Parcela después de limpieza y mantenimiento" loading="lazy" />
+            </button>
+            <button class="gallery-item" type="button" data-full="despues2.jpeg" data-caption="Terreno limpio después del mantenimiento">
+              <img src="despues2.jpeg" alt="Terreno limpio después del mantenimiento exterior" loading="lazy" />
+            </button>
+            <button class="gallery-item" type="button" data-full="seto1.jpeg" data-caption="Setos recortados y perfilados">
+              <img src="seto1.jpeg" alt="Setos recortados y perfilados" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="proceso">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2>Un proceso sencillo para empezar rápido</h2>
+          <p>Envía tu consulta y preparamos una respuesta adaptada al servicio y la zona donde se encuentra el trabajo.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <span>01</span>
+            <h3>Contacto</h3>
+            <p>Cuéntanos qué necesitas por WhatsApp, llamada, email o formulario.</p>
+          </article>
+          <article class="step-card reveal" data-delay="80">
+            <span>02</span>
+            <h3>Valoración</h3>
+            <p>Revisamos servicio, zona, fotos y detalles para orientarte mejor.</p>
+          </article>
+          <article class="step-card reveal" data-delay="160">
+            <span>03</span>
+            <h3>Presupuesto</h3>
+            <p>Recibes una propuesta clara, sin compromiso y ajustada al trabajo.</p>
+          </article>
+          <article class="step-card reveal" data-delay="240">
+            <span>04</span>
+            <h3>Ejecución</h3>
+            <p>Realizamos el mantenimiento con profesionalidad y dejamos la zona limpia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-copy reveal">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2>Información útil antes de pedir presupuesto</h2>
+          <p>Contenido visible y útil para clientes y para SEO local, sin añadir datos no confirmados como reseñas, horarios o dirección.</p>
+        </div>
+
+        <div class="faq-list reveal" data-delay="120">
+          <details open>
+            <summary>¿En qué zonas trabajáis?</summary>
+            <p>Realizamos servicios en Madrid, Toledo, Ávila y alrededores. Indica tu municipio al pedir presupuesto para confirmar disponibilidad.</p>
+          </details>
+          <details>
+            <summary>¿Hacéis puesta a punto de piscinas?</summary>
+            <p>Sí. Hacemos puesta a punto de piscinas antes de la temporada, limpieza inicial, revisión visual y preparación para su uso.</p>
+          </details>
+          <details>
+            <summary>¿También hacéis mantenimiento de piscinas?</summary>
+            <p>Sí. Ofrecemos mantenimiento de piscinas para viviendas, comunidades y fincas, con trabajos puntuales o periódicos según cada caso.</p>
+          </details>
+          <details>
+            <summary>¿El presupuesto es sin compromiso?</summary>
+            <p>Sí. Puedes enviar los datos por WhatsApp, teléfono o email y prepararemos una valoración adaptada al servicio, zona y tamaño del trabajo.</p>
+          </details>
+          <details>
+            <summary>¿Trabajáis para comunidades y empresas?</summary>
+            <p>Sí. Además de particulares, realizamos trabajos para comunidades, empresas, fincas, chalets y espacios exteriores con mantenimiento recurrente.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2>Pide tu presupuesto sin compromiso</h2>
+          <p>
+            Dinos qué trabajo necesitas, en qué provincia o municipio estás y cómo podemos contactar contigo. Al enviar el formulario se abrirá WhatsApp con el mensaje preparado.
+          </p>
+
+          <div class="contact-cards">
+            <a class="contact-card" href="tel:+34608681863">
+              <span>Teléfono</span>
+              <strong>+34 608 68 18 63</strong>
+            </a>
+            <a class="contact-card" href="mailto:jl_mantenimiento_integral@gmail.com">
+              <span>Email</span>
+              <strong>jl_mantenimiento_integral@gmail.com</strong>
+            </a>
+            <div class="contact-card">
+              <span>Zona de trabajo</span>
+              <strong>Madrid, Toledo, Ávila y alrededores</strong>
+            </div>
+          </div>
+
+          <div class="social-row" aria-label="Redes sociales">
+            <a class="social instagram" href="https://www.instagram.com/jl_mantenimiento_integral_" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+            <a class="social facebook" href="https://www.facebook.com/profile.php?id=61577876143836" target="_blank" rel="noopener noreferrer">
+              Facebook
             </a>
           </div>
         </div>
 
-        <div class="contact-item">
-          <div class="contact-label">Zona de trabajo</div>
-          <div class="contact-value">
-            Madrid y alrededores
+        <form class="quote-form reveal" id="presupuestoForm" autocomplete="on">
+          <div class="form-heading">
+            <h3>Solicitar presupuesto</h3>
+            <p>Completa los datos y te responderemos lo antes posible.</p>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <div class="contact-label">Experiencia</div>
-          <div class="contact-value">
-            Más de 10 años en jardinería y mantenimiento exterior
-          </div>
-        </div>
-
-        <div class="contact-socials">
-          <a class="social-btn instagram"
-             href="https://www.instagram.com/jl_mantenimiento_integral_"
-             target="_blank"
-             rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm4.25 5.5a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Zm0 7.75a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm4.9-8.1a1.1 1.1 0 1 1 0-2.2 1.1 1.1 0 0 1 0 2.2Z"/>
-            </svg>
-            Ver Instagram
-          </a>
-
-          <a class="social-btn facebook"
-             href="https://www.facebook.com/profile.php?id=61577876143836"
-             target="_blank"
-             rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M13.5 9H16l.5-3h-3V4.5c0-.87.43-1.5 1.7-1.5H16V0h-2.3C11.4 0 10 1.4 10 3.8V6H7v3h3v9h3.5V9Z"/>
-            </svg>
-            Ver Facebook
-          </a>
-        </div>
-      </div>
-
-      <div class="contact-box">
-        <h3>Solicitar presupuesto</h3>
-
-        <form id="presupuestoForm">
           <div class="form-grid">
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-            </div>
+            <label>
+              Nombre
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </label>
 
-            <div class="form-group">
-              <label for="telefono">Teléfono</label>
-              <input class="form-control" type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" required>
-            </div>
+            <label>
+              Teléfono
+              <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" required />
+            </label>
 
-            <div class="form-group">
-              <label for="zona">Zona</label>
-              <input class="form-control" type="text" id="zona" name="zona" placeholder="Ej: Móstoles, Pozuelo, Madrid...">
-            </div>
+            <label>
+              Provincia
+              <select id="provincia" name="provincia" required>
+                <option value="">Selecciona provincia</option>
+                <option>Madrid</option>
+                <option>Toledo</option>
+                <option>Ávila</option>
+                <option>Alrededores</option>
+              </select>
+            </label>
 
-            <div class="form-group">
-              <label for="servicio">Servicio</label>
-              <select class="form-control" id="servicio" name="servicio" required>
+            <label>
+              Zona / municipio
+              <input type="text" id="zona" name="zona" placeholder="Ej: Móstoles, Toledo, Ávila..." />
+            </label>
+
+            <label class="full-field">
+              Servicio
+              <select id="servicio" name="servicio" required>
                 <option value="">Selecciona un servicio</option>
                 <option>Poda de árboles</option>
                 <option>Corte de setos</option>
                 <option>Limpieza de parcelas</option>
                 <option>Mantenimiento de jardines</option>
+                <option>Puesta a punto de piscinas</option>
+                <option>Mantenimiento de piscinas</option>
+                <option>Jardinería y piscina</option>
                 <option>Otro</option>
               </select>
-            </div>
+            </label>
 
-            <div class="form-group full">
-              <label for="mensaje">Detalles del trabajo</label>
-              <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Describe el trabajo que necesitas"></textarea>
-            </div>
-
-            <div class="form-group full">
-              <button type="submit" class="btn">Solicitar presupuesto</button>
-              <div class="form-note">
-                Al enviar, se abrirá WhatsApp con tu mensaje preparado.
-              </div>
-            </div>
+            <label class="full-field">
+              Detalles del trabajo
+              <textarea id="mensaje" name="mensaje" placeholder="Describe el trabajo, tamaño aproximado, estado actual y si puedes enviar fotos por WhatsApp"></textarea>
+            </label>
           </div>
+
+          <button class="btn btn-primary full-button" type="submit">Enviar por WhatsApp</button>
+          <p class="privacy-note">No se envía nada a servidores: el formulario solo prepara un mensaje de WhatsApp.</p>
         </form>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div>
-        <strong>JL Mantenimiento Integral</strong>
-        <p>
-          Empresa especializada en mantenimiento de jardines, poda de árboles y limpieza de parcelas en Madrid.
-        </p>
-      </div>
-
-      <div>
-        <strong>Experiencia</strong>
-        <p>
-          Más de 10 años de experiencia en el sector.
-          Trabajos realizados para particulares, comunidades y empresas.
-        </p>
+        <a class="footer-brand" href="#inicio">
+          <img src="logo.jpeg" alt="Logo JL Mantenimiento Integral" width="46" height="46" />
+          <strong>JL Mantenimiento Integral</strong>
+        </a>
+        <p>Jardinería, poda, corte de setos, limpieza de parcelas y piscinas en Madrid, Toledo, Ávila y alrededores.</p>
       </div>
 
       <div>
         <strong>Servicios</strong>
-        <p>
-          • Poda de árboles<br>
-          • Corte de setos<br>
-          • Limpieza de parcelas<br>
-          • Mantenimiento de jardines
-        </p>
+        <a href="#servicios">Poda de árboles</a>
+        <a href="#servicios">Corte de setos</a>
+        <a href="#servicios">Limpieza de parcelas</a>
+        <a href="#servicios">Mantenimiento de jardines</a>
+        <a href="#servicios">Puesta a punto de piscinas</a>
+        <a href="#servicios">Mantenimiento de piscinas</a>
       </div>
 
       <div>
-        <strong>Compromiso</strong>
-        <p>
-          Trabajo profesional, puntualidad y presupuestos sin compromiso.
-          Atención personalizada en cada servicio.
-        </p>
+        <strong>Zonas</strong>
+        <a href="#zonas">Madrid y alrededores</a>
+        <a href="#zonas">Toledo y alrededores</a>
+        <a href="#zonas">Ávila y alrededores</a>
+      </div>
+
+      <div>
+        <strong>Contacto</strong>
+        <a href="tel:+34608681863">+34 608 68 18 63</a>
+        <a href="mailto:jl_mantenimiento_integral@gmail.com">jl_mantenimiento_integral@gmail.com</a>
+        <a href="https://wa.me/34608681863" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.instagram.com/jl_mantenimiento_integral_" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61577876143836" target="_blank" rel="noopener noreferrer">Facebook</a>
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <p>© 2026 JL Mantenimiento Integral · Madrid</p>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> JL Mantenimiento Integral · Madrid · Toledo · Ávila</p>
     </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
+
+  <a class="floating-whatsapp" href="https://wa.me/34608681863" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Imagen ampliada">
+    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+    <img src="" alt="" />
+    <p></p>
   </div>
-</footer>
 
-<a class="whatsapp"
-href="https://wa.me/34608681863"
-target="_blank"
-rel="noopener noreferrer">
-WhatsApp
-</a>
-
-<script>
-const form = document.getElementById('presupuestoForm');
-const phoneNumber = '34608681863';
-
-function guardarFormulario(data) {
-  localStorage.setItem('jl_presupuesto', JSON.stringify(data));
-}
-
-function cargarFormulario() {
-  const saved = localStorage.getItem('jl_presupuesto');
-  if (!saved) return;
-
-  try {
-    const data = JSON.parse(saved);
-    if (data.nombre) document.getElementById('nombre').value = data.nombre;
-    if (data.telefono) document.getElementById('telefono').value = data.telefono;
-    if (data.zona) document.getElementById('zona').value = data.zona;
-    if (data.servicio) document.getElementById('servicio').value = data.servicio;
-    if (data.mensaje) document.getElementById('mensaje').value = data.mensaje;
-  } catch (error) {
-    console.error('No se pudieron cargar los datos guardados');
-  }
-}
-
-cargarFormulario();
-
-form.addEventListener('input', () => {
-  const data = {
-    nombre: document.getElementById('nombre').value.trim(),
-    telefono: document.getElementById('telefono').value.trim(),
-    zona: document.getElementById('zona').value.trim(),
-    servicio: document.getElementById('servicio').value,
-    mensaje: document.getElementById('mensaje').value.trim()
-  };
-
-  guardarFormulario(data);
-});
-
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const nombre = document.getElementById('nombre').value.trim();
-  const telefono = document.getElementById('telefono').value.trim();
-  const zona = document.getElementById('zona').value.trim();
-  const servicio = document.getElementById('servicio').value;
-  const mensaje = document.getElementById('mensaje').value.trim();
-
-  const texto = `Hola, soy ${nombre}.
-Quiero solicitar presupuesto.
-
-Teléfono: ${telefono}
-Zona: ${zona || 'No indicada'}
-Servicio: ${servicio}
-Detalles: ${mensaje || 'Sin detalles adicionales'}`;
-
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(texto)}`;
-
-  guardarFormulario({ nombre, telefono, zona, servicio, mensaje });
-  window.open(url, '_blank');
-});
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
